@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище ManagerReportsModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище ManagerReportsModelContainer">
+          <EntitySet Name="L_FilesReport" EntityType="Хранилище ManagerReportsModel.L_FilesReport" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="L_ParamReports" EntityType="Хранилище ManagerReportsModel.L_ParamReports" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="L_Schedule" EntityType="Хранилище ManagerReportsModel.L_Schedule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="L_Subscribes" EntityType="Хранилище ManagerReportsModel.L_Subscribes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="S_ParamDirectory" EntityType="Хранилище ManagerReportsModel.S_ParamDirectory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="S_ParamSys" EntityType="Хранилище ManagerReportsModel.S_ParamSys" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="S_Reports" EntityType="Хранилище ManagerReportsModel.S_Reports" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_L_FilesReport_L_Subscribes_id_subsribes" Association="Хранилище ManagerReportsModel.FK_L_FilesReport_L_Subscribes_id_subsribes">
+            <End Role="L_Subscribes" EntitySet="L_Subscribes" />
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_FilesReport_S_ParamSys_id_format" Association="Хранилище ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_format">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_FilesReport_S_ParamSys_id_place_save_sp" Association="Хранилище ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_place_save_sp">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_FilesReport_S_Reports_id_reports" Association="Хранилище ManagerReportsModel.FK_L_FilesReport_S_Reports_id_reports">
+            <End Role="S_Reports" EntitySet="S_Reports" />
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_L_FilesReport_id_filereport" Association="Хранилище ManagerReportsModel.FK_L_ParamReports_L_FilesReport_id_filereport">
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_S_ParamDirectory_id_value_directory" Association="Хранилище ManagerReportsModel.FK_L_ParamReports_S_ParamDirectory_id_value_directory">
+            <End Role="S_ParamDirectory" EntitySet="S_ParamDirectory" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_S_ParamSys_id_type" Association="Хранилище ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_type">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_S_ParamSys_id_value_exp" Association="Хранилище ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_exp">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_S_ParamSys_id_value_format" Association="Хранилище ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_format">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_Schedule_S_ParamSys_id_type_period" Association="Хранилище ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_period">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_Schedule" EntitySet="L_Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_Schedule_S_ParamSys_id_type_schedule" Association="Хранилище ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_schedule">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_Schedule" EntitySet="L_Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_Subscribes_L_Schedule_id_schedule" Association="Хранилище ManagerReportsModel.FK_L_Subscribes_L_Schedule_id_schedule">
+            <End Role="L_Schedule" EntitySet="L_Schedule" />
+            <End Role="L_Subscribes" EntitySet="L_Subscribes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_S_ParamSys_parent" Association="Хранилище ManagerReportsModel.FK_S_ParamSys_parent">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="S_ParamSys1" EntitySet="S_ParamSys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_S_S_ParamDirectory_parent" Association="Хранилище ManagerReportsModel.FK_S_S_ParamDirectory_parent">
+            <End Role="S_ParamDirectory" EntitySet="S_ParamDirectory" />
+            <End Role="S_ParamDirectory1" EntitySet="S_ParamDirectory" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="L_FilesReport">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="id_reports" Type="int" Nullable="false" />
+          <Property Name="id_subsribes" Type="int" Nullable="false" />
+          <Property Name="id_format" Type="int" Nullable="false" />
+          <Property Name="place_save_local" Type="nvarchar" MaxLength="1000" />
+          <Property Name="id_place_save_sp" Type="int" />
+          <Property Name="sendmail" Type="bit" Nullable="false" />
+          <Property Name="active" Type="bit" Nullable="false" />
+          <Property Name="date_create" Type="datetime" />
+          <Property Name="who_create" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="L_ParamReports">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="id_type" Type="int" Nullable="false" />
+          <Property Name="value_fix" Type="nvarchar" MaxLength="250" />
+          <Property Name="id_value_exp" Type="int" />
+          <Property Name="id_value_directory" Type="int" />
+          <Property Name="id_value_format" Type="int" />
+          <Property Name="id_filereport" Type="int" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="1024" />
+        </EntityType>
+        <EntityType Name="L_Schedule">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="id_type_schedule" Type="int" Nullable="false" />
+          <Property Name="time_schedule" Type="time" Nullable="false" />
+          <Property Name="datetime_start" Type="datetime" />
+          <Property Name="datetime_end" Type="datetime" />
+          <Property Name="id_type_period" Type="int" Nullable="false" />
+          <Property Name="dur_period" Type="int" Nullable="false" />
+          <Property Name="datemonth_start" Type="datetime" />
+          <Property Name="datemonth_end" Type="datetime" />
+          <Property Name="active" Type="bit" Nullable="false" />
+          <Property Name="date_create" Type="datetime" />
+          <Property Name="who_create" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="L_Subscribes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="id_schedule" Type="int" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="1024" />
+          <Property Name="email_test" Type="nvarchar" MaxLength="1024" />
+          <Property Name="file_template_success" Type="uniqueidentifier" />
+          <Property Name="file_template_warning" Type="uniqueidentifier" />
+          <Property Name="datetime_start" Type="datetime" />
+          <Property Name="datetime_end" Type="datetime" />
+          <Property Name="active" Type="bit" Nullable="false" />
+          <Property Name="date_create" Type="datetime" />
+          <Property Name="who_create" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="S_ParamDirectory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_parent" Type="int" />
+          <Property Name="id_direct" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="sysname" Type="nvarchar" MaxLength="250" />
+          <Property Name="email" Type="nvarchar" MaxLength="1024" />
+          <Property Name="sort" Type="int" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="active" Type="bit" Nullable="false" />
+          <Property Name="date_create" Type="datetime" />
+          <Property Name="who_create" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="S_ParamSys">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_parent" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="250" />
+          <Property Name="sysname" Type="nvarchar" MaxLength="250" />
+          <Property Name="sort" Type="int" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="S_Reports">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="path_report" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="active" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_L_FilesReport_L_Subscribes_id_subsribes">
+          <End Role="L_Subscribes" Type="Хранилище ManagerReportsModel.L_Subscribes" Multiplicity="1" />
+          <End Role="L_FilesReport" Type="Хранилище ManagerReportsModel.L_FilesReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="L_Subscribes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_FilesReport">
+              <PropertyRef Name="id_subsribes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_FilesReport_S_ParamSys_id_format">
+          <End Role="S_ParamSys" Type="Хранилище ManagerReportsModel.S_ParamSys" Multiplicity="1" />
+          <End Role="L_FilesReport" Type="Хранилище ManagerReportsModel.L_FilesReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_FilesReport">
+              <PropertyRef Name="id_format" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_FilesReport_S_ParamSys_id_place_save_sp">
+          <End Role="S_ParamSys" Type="Хранилище ManagerReportsModel.S_ParamSys" Multiplicity="0..1" />
+          <End Role="L_FilesReport" Type="Хранилище ManagerReportsModel.L_FilesReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_FilesReport">
+              <PropertyRef Name="id_place_save_sp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_FilesReport_S_Reports_id_reports">
+          <End Role="S_Reports" Type="Хранилище ManagerReportsModel.S_Reports" Multiplicity="1" />
+          <End Role="L_FilesReport" Type="Хранилище ManagerReportsModel.L_FilesReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_Reports">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_FilesReport">
+              <PropertyRef Name="id_reports" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_L_FilesReport_id_filereport">
+          <End Role="L_FilesReport" Type="Хранилище ManagerReportsModel.L_FilesReport" Multiplicity="1" />
+          <End Role="L_ParamReports" Type="Хранилище ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="L_FilesReport">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_filereport" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_S_ParamDirectory_id_value_directory">
+          <End Role="S_ParamDirectory" Type="Хранилище ManagerReportsModel.S_ParamDirectory" Multiplicity="0..1" />
+          <End Role="L_ParamReports" Type="Хранилище ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamDirectory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_value_directory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_S_ParamSys_id_type">
+          <End Role="S_ParamSys" Type="Хранилище ManagerReportsModel.S_ParamSys" Multiplicity="1" />
+          <End Role="L_ParamReports" Type="Хранилище ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_S_ParamSys_id_value_exp">
+          <End Role="S_ParamSys" Type="Хранилище ManagerReportsModel.S_ParamSys" Multiplicity="0..1" />
+          <End Role="L_ParamReports" Type="Хранилище ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_value_exp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_S_ParamSys_id_value_format">
+          <End Role="S_ParamSys" Type="Хранилище ManagerReportsModel.S_ParamSys" Multiplicity="0..1" />
+          <End Role="L_ParamReports" Type="Хранилище ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_value_format" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_Schedule_S_ParamSys_id_type_period">
+          <End Role="S_ParamSys" Type="Хранилище ManagerReportsModel.S_ParamSys" Multiplicity="1" />
+          <End Role="L_Schedule" Type="Хранилище ManagerReportsModel.L_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_Schedule">
+              <PropertyRef Name="id_type_period" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_Schedule_S_ParamSys_id_type_schedule">
+          <End Role="S_ParamSys" Type="Хранилище ManagerReportsModel.S_ParamSys" Multiplicity="1" />
+          <End Role="L_Schedule" Type="Хранилище ManagerReportsModel.L_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_Schedule">
+              <PropertyRef Name="id_type_schedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_Subscribes_L_Schedule_id_schedule">
+          <End Role="L_Schedule" Type="Хранилище ManagerReportsModel.L_Schedule" Multiplicity="1" />
+          <End Role="L_Subscribes" Type="Хранилище ManagerReportsModel.L_Subscribes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="L_Schedule">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_Subscribes">
+              <PropertyRef Name="id_schedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_S_ParamSys_parent">
+          <End Role="S_ParamSys" Type="Хранилище ManagerReportsModel.S_ParamSys" Multiplicity="0..1" />
+          <End Role="S_ParamSys1" Type="Хранилище ManagerReportsModel.S_ParamSys" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="S_ParamSys1">
+              <PropertyRef Name="id_parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_S_S_ParamDirectory_parent">
+          <End Role="S_ParamDirectory" Type="Хранилище ManagerReportsModel.S_ParamDirectory" Multiplicity="0..1" />
+          <End Role="S_ParamDirectory1" Type="Хранилище ManagerReportsModel.S_ParamDirectory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamDirectory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="S_ParamDirectory1">
+              <PropertyRef Name="id_parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="ViewFileReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_subsribes" Type="int" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ManagerReportsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ManagerReportsEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="L_FilesReport" EntityType="ManagerReportsModel.L_FilesReport" />
+          <EntitySet Name="L_ParamReports" EntityType="ManagerReportsModel.L_ParamReports" />
+          <EntitySet Name="L_Schedule" EntityType="ManagerReportsModel.L_Schedule" />
+          <EntitySet Name="L_Subscribes" EntityType="ManagerReportsModel.L_Subscribes" />
+          <EntitySet Name="S_ParamDirectory" EntityType="ManagerReportsModel.S_ParamDirectory" />
+          <EntitySet Name="S_ParamSys" EntityType="ManagerReportsModel.S_ParamSys" />
+          <EntitySet Name="S_Reports" EntityType="ManagerReportsModel.S_Reports" />
+          <AssociationSet Name="FK_L_FilesReport_L_Subscribes_id_subsribes" Association="ManagerReportsModel.FK_L_FilesReport_L_Subscribes_id_subsribes">
+            <End Role="L_Subscribes" EntitySet="L_Subscribes" />
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_FilesReport_S_ParamSys_id_format" Association="ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_format">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_FilesReport_S_ParamSys_id_place_save_sp" Association="ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_place_save_sp">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_FilesReport_S_Reports_id_reports" Association="ManagerReportsModel.FK_L_FilesReport_S_Reports_id_reports">
+            <End Role="S_Reports" EntitySet="S_Reports" />
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_L_FilesReport_id_filereport" Association="ManagerReportsModel.FK_L_ParamReports_L_FilesReport_id_filereport">
+            <End Role="L_FilesReport" EntitySet="L_FilesReport" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_S_ParamDirectory_id_value_directory" Association="ManagerReportsModel.FK_L_ParamReports_S_ParamDirectory_id_value_directory">
+            <End Role="S_ParamDirectory" EntitySet="S_ParamDirectory" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_S_ParamSys_id_type" Association="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_type">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_S_ParamSys_id_value_exp" Association="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_exp">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_ParamReports_S_ParamSys_id_value_format" Association="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_format">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_ParamReports" EntitySet="L_ParamReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_Schedule_S_ParamSys_id_type_period" Association="ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_period">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_Schedule" EntitySet="L_Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_Schedule_S_ParamSys_id_type_schedule" Association="ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_schedule">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="L_Schedule" EntitySet="L_Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_Subscribes_L_Schedule_id_schedule" Association="ManagerReportsModel.FK_L_Subscribes_L_Schedule_id_schedule">
+            <End Role="L_Schedule" EntitySet="L_Schedule" />
+            <End Role="L_Subscribes" EntitySet="L_Subscribes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_S_S_ParamDirectory_parent" Association="ManagerReportsModel.FK_S_S_ParamDirectory_parent">
+            <End Role="S_ParamDirectory" EntitySet="S_ParamDirectory" />
+            <End Role="S_ParamDirectory1" EntitySet="S_ParamDirectory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_S_ParamSys_parent" Association="ManagerReportsModel.FK_S_ParamSys_parent">
+            <End Role="S_ParamSys" EntitySet="S_ParamSys" />
+            <End Role="S_ParamSys1" EntitySet="S_ParamSys" />
+          </AssociationSet>
+          <FunctionImport Name="ViewFileReport" ReturnType="Collection(ManagerReportsModel.ViewFileReport_Result)">
+            <Parameter Name="id_subsribes" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="L_FilesReport">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="id_reports" Type="Int32" Nullable="false" />
+          <Property Name="id_subsribes" Type="Int32" Nullable="false" />
+          <Property Name="id_format" Type="Int32" Nullable="false" />
+          <Property Name="place_save_local" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="id_place_save_sp" Type="Int32" />
+          <Property Name="sendmail" Type="Boolean" Nullable="false" />
+          <Property Name="active" Type="Boolean" Nullable="false" />
+          <Property Name="date_create" Type="DateTime" Precision="3" />
+          <Property Name="who_create" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="L_Subscribes" Relationship="ManagerReportsModel.FK_L_FilesReport_L_Subscribes_id_subsribes" FromRole="L_FilesReport" ToRole="L_Subscribes" />
+          <NavigationProperty Name="S_ParamSysFormat" Relationship="ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_format" FromRole="L_FilesReport" ToRole="S_ParamSys" />
+          <NavigationProperty Name="S_ParamSysPlaceSaveSp" Relationship="ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_place_save_sp" FromRole="L_FilesReport" ToRole="S_ParamSys" />
+          <NavigationProperty Name="S_Reports" Relationship="ManagerReportsModel.FK_L_FilesReport_S_Reports_id_reports" FromRole="L_FilesReport" ToRole="S_Reports" />
+          <NavigationProperty Name="L_ParamReports" Relationship="ManagerReportsModel.FK_L_ParamReports_L_FilesReport_id_filereport" FromRole="L_FilesReport" ToRole="L_ParamReports" />
+        </EntityType>
+        <EntityType Name="L_ParamReports">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="id_type" Type="Int32" Nullable="false" />
+          <Property Name="value_fix" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="id_value_exp" Type="Int32" />
+          <Property Name="id_value_directory" Type="Int32" />
+          <Property Name="id_value_format" Type="Int32" />
+          <Property Name="id_filereport" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="L_FilesReport" Relationship="ManagerReportsModel.FK_L_ParamReports_L_FilesReport_id_filereport" FromRole="L_ParamReports" ToRole="L_FilesReport" />
+          <NavigationProperty Name="S_ParamDirectoryValueDirectory" Relationship="ManagerReportsModel.FK_L_ParamReports_S_ParamDirectory_id_value_directory" FromRole="L_ParamReports" ToRole="S_ParamDirectory" />
+          <NavigationProperty Name="S_ParamSysType" Relationship="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_type" FromRole="L_ParamReports" ToRole="S_ParamSys" />
+          <NavigationProperty Name="S_ParamSysValueExp" Relationship="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_exp" FromRole="L_ParamReports" ToRole="S_ParamSys" />
+          <NavigationProperty Name="S_ParamSysValueFormat" Relationship="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_format" FromRole="L_ParamReports" ToRole="S_ParamSys" />
+        </EntityType>
+        <EntityType Name="L_Schedule">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="id_type_schedule" Type="Int32" Nullable="false" />
+          <Property Name="time_schedule" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="datetime_start" Type="DateTime" Precision="3" />
+          <Property Name="datetime_end" Type="DateTime" Precision="3" />
+          <Property Name="id_type_period" Type="Int32" Nullable="false" />
+          <Property Name="dur_period" Type="Int32" Nullable="false" />
+          <Property Name="datemonth_start" Type="DateTime" Precision="3" />
+          <Property Name="datemonth_end" Type="DateTime" Precision="3" />
+          <Property Name="active" Type="Boolean" Nullable="false" />
+          <Property Name="date_create" Type="DateTime" Precision="3" />
+          <Property Name="who_create" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="S_ParamSysTypePeriod" Relationship="ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_period" FromRole="L_Schedule" ToRole="S_ParamSys" />
+          <NavigationProperty Name="S_ParamSysTypeSchedule" Relationship="ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_schedule" FromRole="L_Schedule" ToRole="S_ParamSys" />
+          <NavigationProperty Name="L_Subscribes" Relationship="ManagerReportsModel.FK_L_Subscribes_L_Schedule_id_schedule" FromRole="L_Schedule" ToRole="L_Subscribes" />
+        </EntityType>
+        <EntityType Name="L_Subscribes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="id_schedule" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="email_test" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="file_template_success" Type="Guid" />
+          <Property Name="file_template_warning" Type="Guid" />
+          <Property Name="datetime_start" Type="DateTime" Precision="3" />
+          <Property Name="datetime_end" Type="DateTime" Precision="3" />
+          <Property Name="active" Type="Boolean" Nullable="false" />
+          <Property Name="date_create" Type="DateTime" Precision="3" />
+          <Property Name="who_create" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="L_FilesReport" Relationship="ManagerReportsModel.FK_L_FilesReport_L_Subscribes_id_subsribes" FromRole="L_Subscribes" ToRole="L_FilesReport" />
+          <NavigationProperty Name="L_Schedule" Relationship="ManagerReportsModel.FK_L_Subscribes_L_Schedule_id_schedule" FromRole="L_Subscribes" ToRole="L_Schedule" />
+        </EntityType>
+        <EntityType Name="S_ParamDirectory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="id_parent" Type="Int32" />
+          <Property Name="id_direct" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="sysname" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="sort" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="active" Type="Boolean" Nullable="false" />
+          <Property Name="date_create" Type="DateTime" Precision="3" />
+          <Property Name="who_create" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="L_ParamReportsValueDirectory" Relationship="ManagerReportsModel.FK_L_ParamReports_S_ParamDirectory_id_value_directory" FromRole="S_ParamDirectory" ToRole="L_ParamReports" />
+          <NavigationProperty Name="S_ParamDirectoryParent" Relationship="ManagerReportsModel.FK_S_S_ParamDirectory_parent" FromRole="S_ParamDirectory" ToRole="S_ParamDirectory1" />
+          <NavigationProperty Name="S_ParamDirectoryParent2" Relationship="ManagerReportsModel.FK_S_S_ParamDirectory_parent" FromRole="S_ParamDirectory1" ToRole="S_ParamDirectory" />
+        </EntityType>
+        <EntityType Name="S_ParamSys">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="id_parent" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="sysname" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="sort" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="L_FilesReportFormat" Relationship="ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_format" FromRole="S_ParamSys" ToRole="L_FilesReport" />
+          <NavigationProperty Name="L_FilesReportPlaceSaveSp" Relationship="ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_place_save_sp" FromRole="S_ParamSys" ToRole="L_FilesReport" />
+          <NavigationProperty Name="L_ParamReportsType" Relationship="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_type" FromRole="S_ParamSys" ToRole="L_ParamReports" />
+          <NavigationProperty Name="L_ParamReportsValueExp" Relationship="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_exp" FromRole="S_ParamSys" ToRole="L_ParamReports" />
+          <NavigationProperty Name="L_ParamReportsValueFormat" Relationship="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_format" FromRole="S_ParamSys" ToRole="L_ParamReports" />
+          <NavigationProperty Name="L_ScheduleTypePeriod" Relationship="ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_period" FromRole="S_ParamSys" ToRole="L_Schedule" />
+          <NavigationProperty Name="L_ScheduleTypeSchedule" Relationship="ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_schedule" FromRole="S_ParamSys" ToRole="L_Schedule" />
+          <NavigationProperty Name="S_ParamSysParent" Relationship="ManagerReportsModel.FK_S_ParamSys_parent" FromRole="S_ParamSys" ToRole="S_ParamSys1" />
+          <NavigationProperty Name="S_ParamSysParent2" Relationship="ManagerReportsModel.FK_S_ParamSys_parent" FromRole="S_ParamSys1" ToRole="S_ParamSys" />
+        </EntityType>
+        <EntityType Name="S_Reports">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="path_report" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="active" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="L_FilesReportReport" Relationship="ManagerReportsModel.FK_L_FilesReport_S_Reports_id_reports" FromRole="S_Reports" ToRole="L_FilesReport" />
+        </EntityType>
+        <Association Name="FK_L_FilesReport_L_Subscribes_id_subsribes">
+          <End Role="L_Subscribes" Type="ManagerReportsModel.L_Subscribes" Multiplicity="1" />
+          <End Role="L_FilesReport" Type="ManagerReportsModel.L_FilesReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="L_Subscribes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_FilesReport">
+              <PropertyRef Name="id_subsribes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_FilesReport_S_ParamSys_id_format">
+          <End Role="S_ParamSys" Type="ManagerReportsModel.S_ParamSys" Multiplicity="1" />
+          <End Role="L_FilesReport" Type="ManagerReportsModel.L_FilesReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_FilesReport">
+              <PropertyRef Name="id_format" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_FilesReport_S_ParamSys_id_place_save_sp">
+          <End Role="S_ParamSys" Type="ManagerReportsModel.S_ParamSys" Multiplicity="0..1" />
+          <End Role="L_FilesReport" Type="ManagerReportsModel.L_FilesReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_FilesReport">
+              <PropertyRef Name="id_place_save_sp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_FilesReport_S_Reports_id_reports">
+          <End Role="S_Reports" Type="ManagerReportsModel.S_Reports" Multiplicity="1" />
+          <End Role="L_FilesReport" Type="ManagerReportsModel.L_FilesReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_Reports">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_FilesReport">
+              <PropertyRef Name="id_reports" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_L_FilesReport_id_filereport">
+          <End Role="L_FilesReport" Type="ManagerReportsModel.L_FilesReport" Multiplicity="1" />
+          <End Role="L_ParamReports" Type="ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="L_FilesReport">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_filereport" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_S_ParamDirectory_id_value_directory">
+          <End Role="S_ParamDirectory" Type="ManagerReportsModel.S_ParamDirectory" Multiplicity="0..1" />
+          <End Role="L_ParamReports" Type="ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamDirectory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_value_directory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_S_ParamSys_id_type">
+          <End Role="S_ParamSys" Type="ManagerReportsModel.S_ParamSys" Multiplicity="1" />
+          <End Role="L_ParamReports" Type="ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_S_ParamSys_id_value_exp">
+          <End Role="S_ParamSys" Type="ManagerReportsModel.S_ParamSys" Multiplicity="0..1" />
+          <End Role="L_ParamReports" Type="ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_value_exp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_ParamReports_S_ParamSys_id_value_format">
+          <End Role="S_ParamSys" Type="ManagerReportsModel.S_ParamSys" Multiplicity="0..1" />
+          <End Role="L_ParamReports" Type="ManagerReportsModel.L_ParamReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_ParamReports">
+              <PropertyRef Name="id_value_format" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_Schedule_S_ParamSys_id_type_period">
+          <End Role="S_ParamSys" Type="ManagerReportsModel.S_ParamSys" Multiplicity="1" />
+          <End Role="L_Schedule" Type="ManagerReportsModel.L_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_Schedule">
+              <PropertyRef Name="id_type_period" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_Schedule_S_ParamSys_id_type_schedule">
+          <End Role="S_ParamSys" Type="ManagerReportsModel.S_ParamSys" Multiplicity="1" />
+          <End Role="L_Schedule" Type="ManagerReportsModel.L_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_Schedule">
+              <PropertyRef Name="id_type_schedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_Subscribes_L_Schedule_id_schedule">
+          <End Role="L_Schedule" Type="ManagerReportsModel.L_Schedule" Multiplicity="1" />
+          <End Role="L_Subscribes" Type="ManagerReportsModel.L_Subscribes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="L_Schedule">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="L_Subscribes">
+              <PropertyRef Name="id_schedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_S_S_ParamDirectory_parent">
+          <End Role="S_ParamDirectory" Type="ManagerReportsModel.S_ParamDirectory" Multiplicity="0..1" />
+          <End Role="S_ParamDirectory1" Type="ManagerReportsModel.S_ParamDirectory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamDirectory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="S_ParamDirectory1">
+              <PropertyRef Name="id_parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_S_ParamSys_parent">
+          <End Role="S_ParamSys" Type="ManagerReportsModel.S_ParamSys" Multiplicity="0..1" />
+          <End Role="S_ParamSys1" Type="ManagerReportsModel.S_ParamSys" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="S_ParamSys">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="S_ParamSys1">
+              <PropertyRef Name="id_parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="ViewFileReport_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="1000" />
+          <Property Type="String" Name="Format_name" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="Format_sysname" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="place_save_local" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="PlaceSaveSp_name" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="path_report" Nullable="false" MaxLength="1000" />
+          <Property Type="String" Name="email" Nullable="true" MaxLength="1024" />
+          <Property Type="Int32" Name="id_subsribes" Nullable="false" />
+          <Property Type="Boolean" Name="sendmail" Nullable="false" />
+          <Property Type="String" Name="NameParamReport" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="TypeParamReport" Nullable="true" />
+          <Property Type="Int32" Name="ParentParamReport" Nullable="true" />
+          <Property Type="Int32" Name="ID_Directory" Nullable="true" />
+          <Property Type="String" Name="Name_Directory" Nullable="true" MaxLength="250" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ManagerReportsModelContainer" CdmEntityContainer="ManagerReportsEntities">
+          <EntitySetMapping Name="L_FilesReport">
+            <EntityTypeMapping TypeName="ManagerReportsModel.L_FilesReport">
+              <MappingFragment StoreEntitySet="L_FilesReport">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id_reports" ColumnName="id_reports" />
+                <ScalarProperty Name="id_subsribes" ColumnName="id_subsribes" />
+                <ScalarProperty Name="id_format" ColumnName="id_format" />
+                <ScalarProperty Name="place_save_local" ColumnName="place_save_local" />
+                <ScalarProperty Name="id_place_save_sp" ColumnName="id_place_save_sp" />
+                <ScalarProperty Name="sendmail" ColumnName="sendmail" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="date_create" ColumnName="date_create" />
+                <ScalarProperty Name="who_create" ColumnName="who_create" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_ParamReports">
+            <EntityTypeMapping TypeName="ManagerReportsModel.L_ParamReports">
+              <MappingFragment StoreEntitySet="L_ParamReports">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id_type" ColumnName="id_type" />
+                <ScalarProperty Name="value_fix" ColumnName="value_fix" />
+                <ScalarProperty Name="id_value_exp" ColumnName="id_value_exp" />
+                <ScalarProperty Name="id_value_directory" ColumnName="id_value_directory" />
+                <ScalarProperty Name="id_value_format" ColumnName="id_value_format" />
+                <ScalarProperty Name="id_filereport" ColumnName="id_filereport" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_Schedule">
+            <EntityTypeMapping TypeName="ManagerReportsModel.L_Schedule">
+              <MappingFragment StoreEntitySet="L_Schedule">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id_type_schedule" ColumnName="id_type_schedule" />
+                <ScalarProperty Name="time_schedule" ColumnName="time_schedule" />
+                <ScalarProperty Name="datetime_start" ColumnName="datetime_start" />
+                <ScalarProperty Name="datetime_end" ColumnName="datetime_end" />
+                <ScalarProperty Name="id_type_period" ColumnName="id_type_period" />
+                <ScalarProperty Name="dur_period" ColumnName="dur_period" />
+                <ScalarProperty Name="datemonth_start" ColumnName="datemonth_start" />
+                <ScalarProperty Name="datemonth_end" ColumnName="datemonth_end" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="date_create" ColumnName="date_create" />
+                <ScalarProperty Name="who_create" ColumnName="who_create" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_Subscribes">
+            <EntityTypeMapping TypeName="ManagerReportsModel.L_Subscribes">
+              <MappingFragment StoreEntitySet="L_Subscribes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id_schedule" ColumnName="id_schedule" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="email_test" ColumnName="email_test" />
+                <ScalarProperty Name="file_template_success" ColumnName="file_template_success" />
+                <ScalarProperty Name="file_template_warning" ColumnName="file_template_warning" />
+                <ScalarProperty Name="datetime_start" ColumnName="datetime_start" />
+                <ScalarProperty Name="datetime_end" ColumnName="datetime_end" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="date_create" ColumnName="date_create" />
+                <ScalarProperty Name="who_create" ColumnName="who_create" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_ParamDirectory">
+            <EntityTypeMapping TypeName="ManagerReportsModel.S_ParamDirectory">
+              <MappingFragment StoreEntitySet="S_ParamDirectory">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_parent" ColumnName="id_parent" />
+                <ScalarProperty Name="id_direct" ColumnName="id_direct" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="sysname" ColumnName="sysname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="sort" ColumnName="sort" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="date_create" ColumnName="date_create" />
+                <ScalarProperty Name="who_create" ColumnName="who_create" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_ParamSys">
+            <EntityTypeMapping TypeName="ManagerReportsModel.S_ParamSys">
+              <MappingFragment StoreEntitySet="S_ParamSys">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_parent" ColumnName="id_parent" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="sysname" ColumnName="sysname" />
+                <ScalarProperty Name="sort" ColumnName="sort" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_Reports">
+            <EntityTypeMapping TypeName="ManagerReportsModel.S_Reports">
+              <MappingFragment StoreEntitySet="S_Reports">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="path_report" ColumnName="path_report" />
+                <ScalarProperty Name="active" ColumnName="active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ViewFileReport" FunctionName="Хранилище ManagerReportsModel.ViewFileReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ManagerReportsModel.ViewFileReport_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="Format_name" ColumnName="Format_name" />
+                <ScalarProperty Name="Format_sysname" ColumnName="Format_sysname" />
+                <ScalarProperty Name="place_save_local" ColumnName="place_save_local" />
+                <ScalarProperty Name="PlaceSaveSp_name" ColumnName="PlaceSaveSp_name" />
+                <ScalarProperty Name="path_report" ColumnName="path_report" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="id_subsribes" ColumnName="id_subsribes" />
+                <ScalarProperty Name="sendmail" ColumnName="sendmail" />
+                <ScalarProperty Name="NameParamReport" ColumnName="NameParamReport" />
+                <ScalarProperty Name="TypeParamReport" ColumnName="TypeParamReport" />
+                <ScalarProperty Name="ParentParamReport" ColumnName="ParentParamReport" />
+                <ScalarProperty Name="ID_Directory" ColumnName="ID_Directory" />
+                <ScalarProperty Name="Name_Directory" ColumnName="Name_Directory" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

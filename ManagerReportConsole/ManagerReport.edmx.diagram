@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b1424c5cb964f6cb44145a0f5c0a39f" Name="Диаграмма1">
+        <EntityTypeShape EntityType="ManagerReportsModel.L_FilesReport" Width="2" PointX="7.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerReportsModel.L_ParamReports" Width="2.25" PointX="9.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerReportsModel.L_Schedule" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerReportsModel.L_Subscribes" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerReportsModel.S_ParamDirectory" Width="2.625" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerReportsModel.S_ParamSys" Width="2" PointX="0.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerReportsModel.S_Reports" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_FilesReport_L_Subscribes_id_subsribes" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_format" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_FilesReport_S_ParamSys_id_place_save_sp" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_FilesReport_S_Reports_id_reports" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_ParamReports_L_FilesReport_id_filereport" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_ParamReports_S_ParamDirectory_id_value_directory" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_type" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_exp" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_ParamReports_S_ParamSys_id_value_format" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_period" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_Schedule_S_ParamSys_id_type_schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_L_Subscribes_L_Schedule_id_schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_S_S_ParamDirectory_parent" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerReportsModel.FK_S_ParamSys_parent" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
