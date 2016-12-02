@@ -1,0 +1,39 @@
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Bot Application1.dll.config
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Bot Application1.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Bot Application1.pdb
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Autofac.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Chronic.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.Bot.Builder.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.Bot.Connector.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Newtonsoft.Json.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\System.Net.Http.Formatting.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\System.Web.Http.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\System.Web.Http.WebHost.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Autofac.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.Bot.Builder.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.Bot.Connector.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.Rest.ClientRuntime.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\Newtonsoft.Json.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\System.Net.Http.Formatting.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\System.Web.Http.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\System.Web.Http.WebHost.xml
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\obj\Debug\MaryaBotApplication.csprojResolveAssemblyReference.cache
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\obj\Debug\Bot Application1.dll
+C:\Users\a-mudrecov\Documents\Visual Studio 2015\Projects\Bot\MaryaBotApplication\MaryaBotApplication\obj\Debug\Bot Application1.pdb
